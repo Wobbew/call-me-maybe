@@ -1,0 +1,151 @@
+[
+  {
+    "prompt": "Is 7 even?",
+    "name": "fn_is_even",
+    "parameters": {
+      "n": 7
+    }
+  },
+  {
+    "prompt": "Is 10 an even number?",
+    "name": "fn_is_even",
+    "parameters": {
+      "n": 10
+    }
+  },
+  {
+    "prompt": "Is 0 even?",
+    "name": "fn_is_even",
+    "parameters": {
+      "n": 0
+    }
+  },
+  {
+    "prompt": "Is -4 even?",
+    "name": "fn_is_even",
+    "parameters": {
+      "n": -4
+    }
+  },
+  {
+    "prompt": "Multiply 6 by 7",
+    "name": "fn_multiply",
+    "parameters": {
+      "x": 6.0,
+      "y": 7.0
+    }
+  },
+  {
+    "prompt": "Multiply 0.5 and 8",
+    "name": "fn_multiply",
+    "parameters": {
+      "x": 0.5,
+      "y": 8.0
+    }
+  },
+  {
+    "prompt": "Multiply 123456789 by 987654321",
+    "name": "fn_multiply",
+    "parameters": {
+      "x": 123456789.0,
+      "y": 987654321.0
+    }
+  },
+  {
+    "prompt": "Convert 'hello world' to uppercase",
+    "name": "fn_to_upper",
+    "parameters": {
+      "text": "hello world"
+    }
+  },
+  {
+    "prompt": "Convert 'the quick brown fox jumps over the lazy dog again and again until the end of the day' to uppercase",
+    "name": "fn_to_upper",
+    "parameters": {
+      "text": "the quick brown fox jumps over the lazy dog again and again until the end of the day"
+    }
+  },
+  {
+    "prompt": "Join 'foo' and 'bar' with '-'",
+    "name": "fn_concat",
+    "parameters": {
+      "a": "foo",
+      "b": "bar",
+      "sep": "-"
+    }
+  },
+  {
+    "prompt": "Join 'a' and 'b' with a comma",
+    "name": "fn_concat",
+    "parameters": {
+      "a": "a",
+      "b": "b",
+      "sep": ","
+    }
+  },
+  {
+    "prompt": "What time is it?",
+    "name": "fn_get_time",
+    "parameters": {}
+  },
+  {
+    "prompt": "Round 3.14159 to 2 decimal places",
+    "name": "fn_round_up",
+    "parameters": {
+      "value": 3.14159
+    }
+  },
+  {
+    "prompt": "Round up 4.2",
+    "name": "fn_round_up",
+    "parameters": {
+      "value": 4.2
+    }
+  },
+  {
+    "prompt": "Count the letter 'a' in 'banana'",
+    "name": "fn_count_char",
+    "parameters": {
+      "text": "banana",
+      "char": "a"
+    }
+  },
+  {
+    "prompt": "Count the letter 'é' in 'été'",
+    "name": "fn_count_char",
+    "parameters": {
+      "text": "été",
+      "char": "é"
+    }
+  },
+  {
+    "prompt": "Turn on the light",
+    "name": "fn_toggle",
+    "parameters": {
+      "flag": true,
+      "label": "light"
+    }
+  },
+  {
+    "prompt": "Turn off the heater",
+    "name": "fn_toggle",
+    "parameters": {
+      "flag": true,
+      "label": "heater"
+    }
+  },
+  {
+    "prompt": "asdfghjkl",
+    "name": "fn_concat",
+    "parameters": {
+      "a": "asdfghjkl",
+      "b": "asdfghjkl",
+      "sep": ""
+    }
+  },
+  {
+    "prompt": "",
+    "name": "fn_get_time",
+    "parameters": {}
+  }
+]

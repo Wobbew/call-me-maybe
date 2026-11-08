@@ -1,0 +1,63 @@
+[
+  {
+    "name": "fn_is_even",
+    "description": "Check whether an integer is even.",
+    "parameters": {"n": {"type": "integer"}},
+    "returns": {"type": "boolean"}
+  },
+  {
+    "name": "fn_multiply",
+    "description": "Multiply two numbers and return the product.",
+    "parameters": {"x": {"type": "number"}, "y": {"type": "number"}},
+    "returns": {"type": "number"}
+  },
+  {
+    "name": "fn_to_upper",
+    "description": "Convert a text to uppercase.",
+    "parameters": {"text": {"type": "string"}},
+    "returns": {"type": "string"}
+  },
+  {
+    "name": "fn_concat",
+    "description": "Join two strings together using a separator.",
+    "parameters": {
+      "a": {"type": "string"},
+      "b": {"type": "string"},
+      "sep": {"type": "string"}
+    },
+    "returns": {"type": "string"}
+  },
+  {
+    "name": "fn_get_time",
+    "description": "Get the current time. Takes no arguments.",
+    "parameters": {},
+    "returns": {"type": "string"}
+  },
+  {
+    "name": "fn_round",
+    "description": "Round a number to a given count of decimal places.",
+    "parameters": {
+      "value": {"type": "number"},
+      "digits": {"type": "integer"}
+    },
+    "returns": {"type": "number"}
+  },
+  {
+    "name": "fn_round_up",
+    "description": "Round a number up to the next whole number (ceiling).",
+    "parameters": {"value": {"type": "number"}},
+    "returns": {"type": "number"}
+  },
+  {
+    "name": "fn_count_char",
+    "description": "Count how often a character appears in a text.",
+    "parameters": {"text": {"type": "string"}, "char": {"type": "string"}},
+    "returns": {"type": "integer"}
+  },
+  {
+    "name": "fn_toggle",
+    "description": "Turn a device on (true) or off (false).",
+    "parameters": {"flag": {"type": "boolean"}, "label": {"type": "string"}},
+    "returns": {"type": "string"}
+  }
+]

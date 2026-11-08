@@ -1,0 +1,52 @@
+{
+  "Is 7 even?": {"name": "fn_is_even", "parameters": {"n": 7}},
+  "Is 10 an even number?": {"name": "fn_is_even", "parameters": {"n": 10}},
+  "Is 0 even?": {"name": "fn_is_even", "parameters": {"n": 0}},
+  "Is -4 even?": {"name": "fn_is_even", "parameters": {"n": -4}},
+  "Multiply 6 by 7": {"name": "fn_multiply", "parameters": {"x": 6, "y": 7}},
+  "Multiply 0.5 and 8": {"name": "fn_multiply", "parameters": {"x": 0.5, "y": 8}},
+  "Multiply 123456789 by 987654321": {
+    "name": "fn_multiply",
+    "parameters": {"x": 123456789, "y": 987654321}
+  },
+  "Convert 'hello world' to uppercase": {
+    "name": "fn_to_upper",
+    "parameters": {"text": "hello world"}
+  },
+  "Convert 'the quick brown fox jumps over the lazy dog again and again until the end of the day' to uppercase": {
+    "name": "fn_to_upper",
+    "parameters": {"text": "the quick brown fox jumps over the lazy dog again and again until the end of the day"}
+  },
+  "Join 'foo' and 'bar' with '-'": {
+    "name": "fn_concat",
+    "parameters": {"a": "foo", "b": "bar", "sep": "-"}
+  },
+  "Join 'a' and 'b' with a comma": {
+    "name": "fn_concat",
+    "parameters": {"a": "a", "b": "b", "sep": ","}
+  },
+  "What time is it?": {"name": "fn_get_time", "parameters": {}},
+  "Round 3.14159 to 2 decimal places": {
+    "name": "fn_round",
+    "parameters": {"value": 3.14159, "digits": 2}
+  },
+  "Round up 4.2": {"name": "fn_round_up", "parameters": {"value": 4.2}},
+  "Count the letter 'a' in 'banana'": {
+    "name": "fn_count_char",
+    "parameters": {"text": "banana", "char": "a"}
+  },
+  "Count the letter 'é' in 'été'": {
+    "name": "fn_count_char",
+    "parameters": {"text": "été", "char": "é"}
+  },
+  "Turn on the light": {
+    "name": "fn_toggle",
+    "parameters": {"flag": true, "label": "light"}
+  },
+  "Turn off the heater": {
+    "name": "fn_toggle",
+    "parameters": {"flag": false, "label": "heater"}
+  },
+  "asdfghjkl": null,
+  "": null
+}

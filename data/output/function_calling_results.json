@@ -23,10 +23,10 @@
     }
   },
   {
-    "prompt": "Greet john",
+    "prompt": "Greet josé",
     "name": "fn_greet",
     "parameters": {
-      "name": "john"
+      "name": "josé"
     }
   },
   {
@@ -72,7 +72,7 @@
     "parameters": {
       "source_string": "Programming is fun",
       "regex": "([aeiouAEIOU])",
-      "replacement": " * "
+      "replacement": "*"
     }
   },
   {

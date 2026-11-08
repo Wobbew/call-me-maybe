@@ -50,16 +50,24 @@ def build_context(functions: list[FunctionDefinition], sentence: str) -> str:
         args = ", ".join(f"{n}: {spec['type']}"
                          for n, spec in f.parameters.items())
         lines.append(f"- {f.name}({args}): {f.description}")
-    example = ('{"name": "fn_example", '
-               '"parameters": {"text": "good morning"}}')
+    examples = (
+        "Example request: Print 'good morning'\n"
+        'Example answer: {"name": "fn_print", '
+        '"parameters": {"text": "good morning"}}\n\n'
+        "Example request: Disable the alarm named night\n"
+        'Example answer: {"name": "fn_alarm", '
+        '"parameters": {"enabled": false, "label": "night"}}\n\n'
+    )
     return (
         "Choose the function that best matches the request and fill in "
-        "its arguments. Copy values exactly from the request, without "
-        "surrounding quotation marks and without extra spaces.\n\n"
+        "its arguments. Arguments are the raw values written in the "
+        "request: copy them exactly, without surrounding quotation marks "
+        "and without extra spaces. Never apply the function yourself "
+        "(do not change letter case or compute a result). Boolean "
+        "arguments are true or false, as the request says.\n\n"
         "Functions:\n" + "\n".join(lines) + "\n\n"
-        "Example request: Shout 'good morning'\n"
-        f"Example answer: {example}\n\n"
-        f"Request: {sentence}\n"
+        + examples
+        + f"Request: {sentence}\n"
         'Answer: {"name": "'
     )
 
@@ -93,7 +101,7 @@ def main() -> int:
                      for f in load_json_list(args.functions_definition)]
         prompts = [TestPrompt.model_validate(t)
                    for t in load_json_list(args.input)]
-    except (InputError, ValidationError) as e:
+    except (Exception) as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
     if not functions:
@@ -101,7 +109,7 @@ def main() -> int:
         return 1
 
     try:
-        llm = LLMInterface()
+            llm = LLMInterface()
     except Exception as e:  # model loading can fail in many ways
         print(f"Error: could not load the model: {e}", file=sys.stderr)
         return 1
@@ -126,4 +134,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-    
