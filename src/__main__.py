@@ -5,7 +5,6 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from pydantic import ValidationError
 
 from .llm_interface import LLMInterface
 from .models import FunctionDefinition, TestPrompt
@@ -109,8 +108,8 @@ def main() -> int:
         return 1
 
     try:
-            llm = LLMInterface()
-    except Exception as e:  # model loading can fail in many ways
+        llm = LLMInterface()
+    except Exception as e:
         print(f"Error: could not load the model: {e}", file=sys.stderr)
         return 1
 

@@ -19,3 +19,10 @@ dev = [
 
 [tool.uv.sources]
 llm-sdk = { path = "llm_sdk" }
+
+[tool.mypy]
+mypy_path = "llm_sdk"
+
+[[tool.mypy.overrides]]
+module = "llm_sdk.*"
+ignore_errors = true

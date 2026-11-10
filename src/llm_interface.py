@@ -1,3 +1,4 @@
+from functools import lru_cache
 import json
 from typing import Any
 
@@ -38,6 +39,7 @@ class LLMInterface(BaseModel):
         self.model = Small_LLM_Model(self.model_name)
         self.id_to_text = self._load_vocab()
 
+    @lru_cache(maxsize=1)
     def _load_vocab(self) -> dict[int, str]:
         """Map token id -> real text by undoing the byte disguise."""
         assert self.model is not None
@@ -53,7 +55,7 @@ class LLMInterface(BaseModel):
             try:
                 result[token_id] = data.decode("utf-8")
             except UnicodeDecodeError:
-                continue    # half of a multi-byte character: not usable
+                continue
         return result
 
     def get_logits(self, text: str) -> list[float]:
@@ -77,7 +79,7 @@ class LLMInterface(BaseModel):
                 return matching[0]
             logits = self.get_logits(context + generated)
             best_id, best_score = -1, float("-inf")
-            ranked: list[tuple[float, str]] = []        
+            ranked: list[tuple[float, str]] = []
             for token_id, text in self.id_to_text.items():
                 if token_id >= len(logits) or not text:
                     continue
